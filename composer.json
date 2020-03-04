@@ -37,7 +37,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Orzford\\Limoncello\\Test\\Spatial\\": "tests/"
+            "Orzford\\Limoncello\\Tests\\Spatial\\": "tests/"
         }
     },
     "scripts": {
