@@ -5,10 +5,10 @@ namespace Orzford\Limoncello\Spatial\Types;
 /**
  * @package App
  */
-class PointType extends \Brick\Geo\Doctrine\Types\PointType
+class PolygonType extends \Brick\Geo\Doctrine\Types\PointType
 {
     /**
      * Type name
      */
-    const NAME = 'limoncelloPoint';
+    const NAME = 'limoncelloPolyon';
 }
