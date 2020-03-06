@@ -39,7 +39,6 @@ class PointTypeTest extends TestCase
      */
     public function testPointFromWKB(): void
     {
-        /** @var Point $point */
         $point = Point::fromBinary(hex2bin('0101000000363b527de78b5c40a5d8d138d4433640'), 4326);
 
         $this->assertInstanceOf(Point::class, $point);
@@ -58,7 +57,6 @@ class PointTypeTest extends TestCase
      */
     public function testWKTToPoint(): void
     {
-        /** @var Point $point */
         $point = Point::fromText('POINT (114.186004 22.264957)', 4326);
 
         $this->assertEquals(114.186004, $point->x());
@@ -78,6 +76,7 @@ class PointTypeTest extends TestCase
 
         $wkb = hex2bin('0101000000363b527de78b5c40a5d8d138d4433640');
 
+        /** @var PointProxy $phpValue */
         $phpValue = $type->convertToPHPValue($wkb, $platform);
 
         $this->assertInstanceOf(PointProxy::class, $phpValue);
