@@ -21,8 +21,8 @@ class SpatialContainerConfigurator extends FluteContainerConfigurator
     {
         parent::configureContainer($container);
 
-        Type::hasType(LineStringType::NAME) === false ?: Type::addType(LineStringType::NAME, LineStringType::class);
-        Type::hasType(PointType::NAME) === false ?: Type::addType(PointType::NAME, PointType::class);
-        Type::hasType(PolygonType::NAME) === false ?: Type::addType(PolygonType::NAME, PolygonType::class);
+        Type::hasType(LineStringType::NAME) === true ?: Type::addType(LineStringType::NAME, LineStringType::class);
+        Type::hasType(PointType::NAME) === true ?: Type::addType(PointType::NAME, PointType::class);
+        Type::hasType(PolygonType::NAME) === true ?: Type::addType(PolygonType::NAME, PolygonType::class);
     }
 }
